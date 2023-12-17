@@ -33,7 +33,7 @@ public class DashBoardStruct extends Frame implements ActionListener{
         btMultiFunction.setFocusable(false);
         btMultiFunction.addActionListener(this);
 
-        togglePanel.setLocation(1054, 100);
+        togglePanel.setLocation(1100, 100);
         togglePanel.setVisible(false);
 
         togglePanel.btLogOut.addActionListener(this);
@@ -56,7 +56,9 @@ public class DashBoardStruct extends Frame implements ActionListener{
             }
         }if(e.getSource() == togglePanel.btLogOut){
             if(TogglePanel.confirmToLogOut()){
+                Home home = new Home();
                 this.dispose();
+                home.setVisible(true);
             }
         }
     }
